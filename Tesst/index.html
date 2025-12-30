@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VLXD Giá Tốt - Vật Liệu Xây Dựng Chất Lượng Cao</title>
+    <meta name="description" content="Cung cấp vật liệu xây dựng chất lượng cao: gạch ốp lát, sàn vinyl, thiết bị vệ sinh, nội thất, rèm cửa. Giá cả cạnh tranh, giao hàng tận nơi.">
+    
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <i class="fas fa-building"></i>
+                    <span>VLXD</span>
+                </a>
+                
+                <nav class="nav" id="nav">
+                    <div class="nav-dropdown">
+                        <a href="products.html">Sản phẩm <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="products.html?category=gach">Gạch ốp lát</a>
+                            <a href="products.html?category=guong">Gương</a>
+                            <a href="products.html?category=vat-lieu-mat-dung">Vật liệu mặt dựng</a>
+                            <a href="products.html?category=vat-lieu-op-tran">Vật liệu ốp trần</a>
+                            <a href="products.html?category=vat-lieu-op-tuong">Vật liệu ốp tường</a>
+                            <a href="products.html?category=noi-that">Nội thất</a>
+                            <a href="products.html?category=rem-cua">Rèm Cửa</a>
+                            <a href="products.html?category=san-go">Sàn gỗ</a>
+                            <a href="products.html?category=san-vinyl">Sàn vinyl</a>
+                            <a href="products.html?category=thiet-bi-gia-dung">Thiết bị gia dụng</a>
+                            <a href="products.html?category=thiet-bi-ve-sinh">Thiết bị vệ sinh</a>
+                        </div>
+                    </div>
+                    <div class="nav-dropdown">
+                        <a href="#">Không gian sống <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="products.html?space=cong-cong">Không gian công cộng</a>
+                            <a href="products.html?space=gia-dinh">Không gian gia đình</a>
+                        </div>
+                    </div>
+                    <div class="nav-dropdown">
+                        <a href="products.html">Thương hiệu <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="products.html?brand=an-cuong">An Cường</a>
+                            <a href="products.html?brand=basic">Basic</a>
+                            <a href="products.html?brand=bosch">Bosch</a>
+                            <a href="products.html?brand=caesar">Caesar</a>
+                            <a href="products.html?brand=dong-tam">Đồng Tâm</a>
+                            <a href="products.html?brand=ivc">IVC</a>
+                            <a href="products.html?brand=toto">Toto</a>
+                            <a href="products.html?brand=viva">Viva</a>
+                        </div>
+                    </div>
+                    <a href="about.html">Giới thiệu</a>
+                    <a href="contact.html">Liên hệ</a>
+                </nav>
+                
+                <div class="header-actions">
+                    <div class="search-box">
+                        <input type="text" placeholder="Tìm kiếm sản phẩm..." id="searchInput">
+                        <button type="button" id="searchBtn"><i class="fas fa-search"></i></button>
+                    </div>
+
+                    <a href="cart.html" class="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </a>
+                    <a href="login.html" class="cart-icon" title="Đăng nhập">
+                        <i class="fas fa-user"></i>
+                    </a>
+                    <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+
+        <section class="hero" id="heroBanner">
+            <div class="banner-slide active" style="background-image: url('images/banner.jpg');"></div>
+            <div class="banner-slide" style="background-image: url('images/banner1.jpg');"></div>
+            <div class="banner-slide" style="background-image: url('images/banner2.jpg');"></div>
+        </section>
+
+
+        <section class="section" style="background-color: #f8f9fa;">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Sản Phẩm Mới</h2>
+                    <p>Những sản phẩm mới nhất với giá ưu đãi</p>
+                </div>
+                
+                <div class="product-grid" id="featuredProducts">
+
+                </div>
+                
+                <div class="text-center mt-4">
+                    <a href="products.html" class="cta-button">Xem Tất Cả Sản Phẩm</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Sản Phẩm Bán Chạy</h2>
+                    <p>Những sản phẩm có giá tốt nhất</p>
+                </div>
+                
+                <div class="product-grid" id="bestSellingProducts">
+                    <!-- Best selling products will be loaded by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- New Products Section -->
+        <section class="section" style="background-color: #f8f9fa;">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Sản Phẩm Sale Lớn</h2>
+                    <p>Khám phá những sản phẩm đang giảm giá lớn nhất từ các thương hiệu uy tín</p>
+                </div>
+                
+                <div class="product-grid" id="newProducts">
+                    <!-- New products will be loaded by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us Section -->
+        <section class="section" style="background-color: #f8f9fa;">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Tại Sao Chọn Chúng Tôi?</h2>
+                </div>
+                
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <h3>Chất Lượng Cao</h3>
+                        <p>Chúng tôi chỉ cung cấp những sản phẩm chất lượng tốt nhất, đảm bảo tiêu chuẩn xây dựng.</p>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-dollar-sign"></i>
+                        </div>
+                        <h3>Giá Cả Hợp Lý</h3>
+                        <p>Giá cả cạnh tranh nhất thị trường, giúp bạn tiết kiệm chi phí xây dựng.</p>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-truck"></i>
+                        </div>
+                        <h3>Giao Hàng Tận Nơi</h3>
+                        <p>Dịch vụ giao hàng nhanh chóng, tận nơi trong khu vực thành phố.</p>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <h3>Hỗ Trợ 24/7</h3>
+                        <p>Đội ngũ tư vấn chuyên nghiệp, sẵn sàng hỗ trợ bạn mọi lúc.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Về VLXD Giá Tốt</h3>
+                    <p>Chúng tôi là đơn vị chuyên cung cấp vật liệu xây dựng chất lượng cao với hơn 10 năm kinh nghiệm trong ngành.</p>
+                    <p>Cam kết mang đến cho khách hàng những sản phẩm tốt nhất với giá cả cạnh tranh nhất thị trường.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Liên Kết Nhanh</h3>
+                    <a href="index.html">Trang chủ</a>
+                    <a href="products.html">Sản phẩm</a>
+                    <a href="about.html">Giới thiệu</a>
+                    <a href="contact.html">Liên hệ</a>
+                    <a href="cart.html">Giỏ hàng</a>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Danh Mục Sản Phẩm</h3>
+                    <a href="products.html?category=gach">Gạch ốp lát</a>
+                    <a href="products.html?category=guong">Gương</a>
+                    <a href="products.html?category=vat-lieu-mat-dung">Vật liệu mặt dựng</a>
+                    <a href="products.html?category=vat-lieu-op-tran">Vật liệu ốp trần</a>
+                    <a href="products.html?category=vat-lieu-op-tuong">Vật liệu ốp tường</a>
+                    <a href="products.html?category=noi-that">Nội thất</a>
+                    <a href="products.html?category=rem-cua">Rèm Cửa</a>
+                    <a href="products.html?category=san-go">Sàn gỗ</a>
+                    <a href="products.html?category=san-vinyl">Sàn vinyl</a>
+                    <a href="products.html?category=thiet-bi-gia-dung">Thiết bị gia dụng</a>
+                    <a href="products.html?category=thiet-bi-ve-sinh">Thiết bị vệ sinh</a>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Thông Tin Liên Hệ</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 99 Vành Đai Tây, P. An Khánh, TP. Hồ Chí Minh</p>
+                    <p><i class="fas fa-phone"></i> Hotline tư vấn: 0938619989</p>
+                    <p><i class="fas fa-phone"></i> Hotline đại lý: 0938417635</p>
+                    <p><i class="fas fa-envelope"></i> info@vlxdgiatot.com</p>
+                    <p><i class="fas fa-clock"></i> 8:30AM - 5:30PM mỗi ngày</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 VLXD Giá Tốt. Tất cả quyền được bảo lưu.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/products.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/filter.js"></script>
+    <script src="js/search.js"></script>
+    
+    <script>
+        // Load products on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            loadFeaturedProducts();
+            loadBestSellingProducts();
+            loadNewProducts();
+            updateCartCount();
+            initBannerSlideshow();
+        });
+        
+        // Banner slideshow function
+        function initBannerSlideshow() {
+            const slides = document.querySelectorAll('.banner-slide');
+            let currentSlide = 0;
+            
+            function showNextSlide() {
+                // Remove active class from current slide
+                slides[currentSlide].classList.remove('active');
+                
+                // Move to next slide
+                currentSlide = (currentSlide + 1) % slides.length;
+                
+                // Add active class to next slide
+                slides[currentSlide].classList.add('active');
+            }
+            
+            // Start slideshow - change slide every 3 seconds
+            setInterval(showNextSlide, 3000);
+        }
+        
+        
+        function loadFeaturedProducts() {
+            const featuredContainer = document.getElementById('featuredProducts');
+            const featuredProducts = getFeaturedProducts();
+            
+            featuredContainer.innerHTML = featuredProducts.map(product => createProductCard(product)).join('');
+        }
+        
+        function loadBestSellingProducts() {
+            const bestSellingContainer = document.getElementById('bestSellingProducts');
+            const bestSellingProducts = getBestSellingProducts();
+            
+            bestSellingContainer.innerHTML = bestSellingProducts.map(product => createProductCard(product)).join('');
+        }
+        
+        function loadNewProducts() {
+            const newProductsContainer = document.getElementById('newProducts');
+            const newProducts = getNewProducts();
+            
+            newProductsContainer.innerHTML = newProducts.map(product => createProductCard(product)).join('');
+        }
+        
+        function createProductCard(product) {
+            const discountBadge = product.discount ? `<div class="discount-badge">-${product.discount}%</div>` : '';
+            const originalPrice = product.originalPrice ? `<span class="original-price">${product.originalPrice.toLocaleString('vi-VN')} VNĐ</span>` : '';
+            const brandInfo = product.brand ? `<div class="product-brand">Thương hiệu: ${product.brand}</div>` : '';
+            
+            return `
+                <div class="product-card" data-product-id="${product.id}">
+                    ${discountBadge}
+                    <a href="chitietsp.html?id=${product.id}" class="product-link">
+                        <img src="${product.image}" alt="${product.name}" class="product-image">
+                        <div class="product-info">
+                            <h3 class="product-name">${product.name}</h3>
+                            <p class="product-description">${product.description}</p>
+                            ${brandInfo}
+                            <div class="product-price">
+                                ${originalPrice}
+                                <span class="current-price">${product.price.toLocaleString('vi-VN')} VNĐ</span>
+                                <span class="product-unit">/${product.unit}</span>
+                            </div>
+                        </div>
+                    </a>
+                    <button class="add-to-cart" onclick="event.stopPropagation(); addToCart(${product.id}); return false;">
+                        <i class="fas fa-cart-plus"></i> Thêm vào giỏ
+                    </button>
+                </div>
+            `;
+        }
+    </script>
+    
+    <style>
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .feature-item {
+            text-align: center;
+            padding: 2rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            color: #e74c3c;
+            margin-bottom: 1rem;
+        }
+        
+        .feature-item h3 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+        
+        .feature-item p {
+            color: #666;
+        }
+        
+        @media (max-width: 768px) {
+            .features-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            
+            .feature-item {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</body>
+</html>
+

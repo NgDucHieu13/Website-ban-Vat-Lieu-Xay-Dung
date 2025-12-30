@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Trang Quản Trị Hệ Thống</title>
+    <link rel="stylesheet" href="css/admin.css">
+
+    <script defer src="js/admin.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+<body>
+    <div class="admin-container">
+        <aside class="sidebar">
+            <div class="sidebar-logo">Trang Quản Trị</div>
+            <nav class="sidebar-menu">
+                <ul>
+                    <li id="menu-product" class="active">Sản phẩm</li>
+                    <li id="menu-customer">Khách hàng</li>
+                    <li id="menu-order">Đơn hàng</li>
+                    <li id="menu-report">Thống kê - Báo cáo</li>
+                </ul>
+            </nav>
+
+            <div class="sidebar-footer">
+            <a href="index.html" class="home-link">
+                <span>&#8962;</span>Trang Chủ
+            </a>
+    </div>
+        </aside>
+        <main class="main-content">
+            <!-- SẢN PHẨM -->
+            <section id="section-product" class="admin-section">
+                <h2>Quản lý sản phẩm</h2>
+                <button class="add-btn" id="show-add-form">Thêm sản phẩm</button>
+                <form id="product-form" class="hide">
+                    <input type="hidden" id="product-id">
+                    <div>
+                        <label>Mã SP:</label>
+                        <input type="text" id="product-code" required>
+                    </div>
+                    <div>
+                        <label>Tên sản phẩm:</label>
+                        <input type="text" id="product-name" required>
+                    </div>
+                    <div>
+                       <label>Hình ảnh:</label>
+                        <input type="file" id="product-image" accept="image/*">
+                        <img id="image-preview" src="" alt="" style="width: 100px; margin-top: 10px; display: none;">
+                    </div>
+                    <div>
+                        <label>Giới thiệu:</label>
+                        <input type="text" id="product-desc" required>
+                    </div>
+                    <div>
+                        <label>Loại:</label>
+                        <select id="product-category" required>
+                            <option value="">--Chọn loại sản phẩm--</option>
+                            <option value="gach">Gạch ốp lát</option>
+                            <option value="guong">Gương</option>
+                            <option value="vat-lieu-mat-dung">Vật liệu mặt dựng</option>
+                            <option value="vat-lieu-op-tran">Vật liệu ốp trần</option>
+                            <option value="vat-lieu-op-tuong">Vật liệu ốp tường</option>
+                            <option value="noi-that">Nội thất</option>
+                            <option value="rem-cua">Rèm Cửa</option>
+                            <option value="san-go">Sàn gỗ</option>
+                            <option value="san-vinyl">Sàn vinyl</option>
+                            <option value="thiet-bi-gia-dung">Thiết bị gia dụng</option>
+                            <option value="thiet-bi-ve-sinh">Thiết bị vệ sinh</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label>Thương hiệu:</label>
+                            <select id="product-brand" required>
+                                <option value="An Cường">An Cường</option>
+                                <option value="Basic">Basic</option>
+                                <option value="Bosch">Bosch</option>
+                                <option value="Caesar">Caesar</option>
+                                <option value="Đồng Tâm">Đồng Tâm</option>
+                                <option value="IVC">IVC</option>
+                                <option value="Toto">Toto</option>
+                                <option value="Viva">Viva</option>
+                            </select>
+                    </div>
+
+                    
+            
+                    <div>
+                        <label>Giá:</label>
+                        <input type="number" id="product-price" required>
+                    </div>
+                    <div>
+                        <label>Số lượng:</label>
+                        <input type="number" id="product-quantity" required>
+                    </div>
+                    <button type="submit" id="save-product-btn">Lưu</button>
+                    <button type="button" id="cancel-btn">Hủy</button>
+                </form>
+                <table class="product-table">
+                    <thead>
+                        <tr>
+                            <th>Mã SP</th>
+                            <th>Tên SP</th>
+                            <th>Hình ảnh</th>
+                            <th>Giới thiệu</th>
+                            <th>Thương hiệu</th>
+                            <th>Loại</th>
+                            <th>Giá</th>
+                            <th>Số lượng</th>
+                            <th>Hành động</th>
+                        </tr>
+                    </thead>
+                    <tbody id="product-tbody">
+                        <!-- Render sản phẩm JS ở đây -->
+                    </tbody>
+                </table>
+            </section>
+            <!-- KHÁCH HÀNG -->
+            <section id="section-customer" class="admin-section hide">
+                <h2>Quản lý khách hàng</h2>
+                <button class="add-btn" id="show-add-customer-form">Thêm khách hàng</button>
+                <form id="customer-form" class="hide">
+                    <input type="hidden" id="customer-id">
+                    <div>
+                        <label>Mã KH:</label>
+                        <input type="text" id="customer-code" required>
+                    </div>
+                    <div>
+                        <label>Tên khách hàng:</label>
+                        <input type="text" id="customer-name" required>
+                    </div>
+                    <div>
+                        <label>Địa chỉ:</label>
+                        <input type="text" id="customer-address" required>
+                    </div>
+                    <div>
+                        <label>Số điện thoại:</label>
+                        <input type="text" id="customer-phone" required>
+                    </div>
+                    <div>
+                        <label>Email:</label>
+                        <input type="email" id="customer-email" required>
+                    </div>
+                    <div>
+                        <label>Tài khoản:</label>
+                        <input type="text" id="customer-username" required>
+                    </div>
+                    <div>
+                        <label>Mật khẩu:</label>
+                        <input type="password" id="customer-password" required>
+                    </div>
+                    <button type="submit" id="save-customer-btn">Lưu</button>
+                    <button type="button" id="cancel-customer-btn">Hủy</button>
+                </form>
+                <table class="product-table">
+                    <thead>
+                        <tr>
+                            <th>Mã KH</th>
+                            <th>Tên khách hàng</th>
+                            <th>Địa chỉ</th>
+                            <th>Số điện thoại</th>
+                            <th>Email</th>
+                            <th>Tài khoản</th>
+                            <th>Mật khẩu</th>
+                            <th>Hành động</th>
+                        </tr>
+                    </thead>
+                    <tbody id="customer-tbody">
+                        <!-- Render khách hàng JS ở đây -->
+                    </tbody>
+                </table>
+            </section>
+            <!-- ĐƠN HÀNG -->
+            <section id="section-order" class="admin-section hide">
+            <h2>Quản lý đơn hàng</h2>
+            <button class="add-btn" id="show-add-order-form">Tạo đơn hàng mới</button>
+            
+            <form id="order-form" class="hide">
+                <input type="hidden" id="order-id-hidden">
+                <div>
+                    <label>Mã vận đơn:</label>
+                    <input type="text" id="order-code" placeholder="VD: DH001" required>
+                </div>
+                <div>
+                    <label>Khách hàng:</label>
+                    <select id="order-customer" required>
+                        </select>
+                </div>
+                <div>
+                    <label>Sản phẩm:</label>
+                    <select id="order-product" required>
+                        </select>
+                </div>
+                <div>
+                    <label>Số lượng:</label>
+                    <input type="number" id="order-quantity" min="1" value="1" required>
+                </div>
+                <div>
+                    <label>Trạng thái:</label>
+                    <select id="order-status">
+                        <option value="processing">Đang xử lý</option>
+                        <option value="completed">Đã xong</option>
+                    </select>
+                </div>
+                <div style="flex: 1 1 100%;">
+                    <button type="submit" id="save-order-btn">Lưu đơn hàng</button>
+                    <button type="button" id="cancel-order-btn">Hủy</button>
+                </div>
+            </form>
+
+            <table class="product-table">
+                <thead>
+                    <tr>
+                        <th>Mã vận</th>
+                        <th>Khách hàng</th>
+                        <th>Sản phẩm</th>
+                        <th>SL</th>
+                        <th>Tổng tiền</th>
+                        <th>Trạng thái</th>
+                        <th>Hành động</th>
+                    </tr>
+                </thead>
+                <tbody id="order-tbody">
+                    </tbody>
+            </table>
+        </section>
+            <!-- THỐNG KÊ - BÁO CÁO -->
+           <section id="section-report" class="admin-section hide">
+                <h2>Thống kê & Báo cáo doanh thu</h2>
+                
+                <div class="report-grid">
+                    <div class="report-card">
+                        <h3>Tổng doanh thu</h3>
+                        <p id="stat-revenue">0đ</p>
+                    </div>
+                    <div class="report-card">
+                        <h3>Đơn hàng hoàn tất</h3>
+                        <p id="stat-order-count">0</p>
+                    </div>
+                    <div class="report-card">
+                        <h3>Khách hàng</h3>
+                        <p id="stat-customer-count">0</p>
+                    </div>
+                    <div class="report-card">
+                        <h3>Sản phẩm trong kho</h3>
+                        <p id="stat-product-count">0</p>
+                    </div>
+                </div>
+
+                <div class="report-details">
+                    <h3>Sản phẩm đã bán (Chi tiết)</h3>
+                    <table class="product-table">
+                        <thead>
+                            <tr>
+                                <th>Tên sản phẩm</th>
+                                <th>Số lượng đã bán</th>
+                                <th>Doanh thu</th>
+                            </tr>
+                        </thead>
+                        <tbody id="report-tbody">
+                            </tbody>
+                    </table>
+                </div>
+                
+                <div class="report-charts">
+                    <div class="chart-container">
+                        <h3>Biểu đồ doanh thu theo sản phẩm</h3>
+                        <canvas id="revenueChart"></canvas>
+                    </div>
+                </div>
+
+            </section>
+
+
+
+
+        </main>
+    </div>
+</body>
+</html>

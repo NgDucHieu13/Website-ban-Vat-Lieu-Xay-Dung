@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giỏ Hàng - Vật Liệu Xây Dựng</title>
+    <meta name="description" content="Xem và quản lý giỏ hàng của bạn. Đặt hàng vật liệu xây dựng dễ dàng và nhanh chóng.">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-hammer"></i>
+                    <span>Vật Liệu Xây Dựng</span>
+                </div>
+                
+                <nav class="nav" id="nav">
+                    <a href="index.html">Trang chủ</a>
+                    <a href="products.html">Sản phẩm</a>
+                    <a href="about.html">Giới thiệu</a>
+                    <a href="contact.html">Liên hệ</a>
+                </nav>
+                
+                <div class="header-actions">
+                    <a href="cart.html" class="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </a>
+                    <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <div class="container">
+            <!-- Page Header -->
+            <div class="page-header">
+                <h1>Giỏ Hàng</h1>
+                <p>Xem và quản lý sản phẩm trong giỏ hàng của bạn</p>
+            </div>
+
+            <!-- Cart Content -->
+            <div class="cart-container">
+                <!-- Empty Cart Message -->
+                <div class="empty-state" id="emptyCart">
+                    <i class="fas fa-shopping-cart"></i>
+                    <h3>Giỏ hàng trống</h3>
+                    <p>Bạn chưa có sản phẩm nào trong giỏ hàng</p>
+                    <a href="products.html" class="cta-button">Mua sắm ngay</a>
+                </div>
+
+                <!-- Cart Items -->
+                <div class="cart-items" id="cartItems">
+                    <!-- Cart items will be loaded by JavaScript -->
+                </div>
+
+                <!-- Cart Summary -->
+                <div class="cart-summary" id="cartSummary">
+                    <h3>Tổng kết đơn hàng</h3>
+                    <div class="summary-row">
+                        <span>Tạm tính:</span>
+                        <span id="subtotal">0 VNĐ</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Phí vận chuyển:</span>
+                        <span id="shipping">Miễn phí</span>
+                    </div>
+                    <div class="summary-row total">
+                        <span>Tổng cộng:</span>
+                        <span id="total">0 VNĐ</span>
+                    </div>
+                </div>
+
+                <!-- Order Form -->
+                <form class="order-form" id="orderForm">
+                    <h3>Thông tin đặt hàng</h3>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="customerName" class="form-label">Họ và tên *</label>
+                            <input type="text" id="customerName" name="customerName" class="form-input" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="customerPhone" class="form-label">Số điện thoại *</label>
+                            <input type="tel" id="customerPhone" name="customerPhone" class="form-input" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="customerEmail" class="form-label">Email</label>
+                        <input type="email" id="customerEmail" name="customerEmail" class="form-input">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="deliveryAddress" class="form-label">Địa chỉ giao hàng *</label>
+                        <textarea id="deliveryAddress" name="deliveryAddress" class="form-input form-textarea" rows="3" required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="orderNote" class="form-label">Ghi chú đơn hàng</label>
+                        <textarea id="orderNote" name="orderNote" class="form-input form-textarea" rows="2"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-order" id="submitOrder">
+                        <i class="fas fa-check"></i> Đặt hàng
+                    </button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Về Chúng Tôi</h3>
+                    <p>Chúng tôi là đơn vị chuyên cung cấp vật liệu xây dựng chất lượng cao với hơn 10 năm kinh nghiệm trong ngành.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Liên Kết Nhanh</h3>
+                    <a href="index.html">Trang chủ</a>
+                    <a href="products.html">Sản phẩm</a>
+                    <a href="about.html">Giới thiệu</a>
+                    <a href="contact.html">Liên hệ</a>
+                    <a href="cart.html">Giỏ hàng</a>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Thông Tin Liên Hệ</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Đường ABC, Quận XYZ, TP.HCM</p>
+                    <p><i class="fas fa-phone"></i> 0123 456 789</p>
+                    <p><i class="fas fa-envelope"></i> info@vatlieuxaydung.com</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Vật Liệu Xây Dựng. Tất cả quyền được bảo lưu.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/products.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/main.js"></script>
+    
+    <style>
+        .page-header {
+            text-align: center;
+            padding: 2rem 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            margin: -20px -20px 2rem -20px;
+        }
+        
+        .page-header h1 {
+            color: white;
+            margin-bottom: 0.5rem;
+        }
+        
+        .page-header p {
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 0;
+        }
+        
+        .cart-items {
+            margin-bottom: 2rem;
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+        
+        .summary-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .summary-row.total {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #e74c3c;
+            border-bottom: 2px solid #e74c3c;
+            margin-bottom: 2rem;
+        }
+        
+        .submit-order {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+        
+        .submit-order i {
+            font-size: 1.1rem;
+        }
+        
+        @media (max-width: 768px) {
+            .page-header {
+                margin: -15px -15px 2rem -15px;
+                padding: 1.5rem 0;
+            }
+            
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</body>
+</html>
+
+
